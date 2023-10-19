@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<context:annotation-config />
+ <!-- byName and byType -->
+ 
+	<bean class="com.springcore.springbasic.autowireusingannotation.Address" name="address">
+		<property name="street" value="church street" />
+		<property name="city" value="Mumbai" />
+	</bean>
+	<bean class="com.springcore.springbasic.autowireusingannotation.Address"  name="address1"> 
+		<property name="street" value="mg road" />
+		<property name="city" value="Delhi" />
+	</bean>
+
+	<bean class="com.springcore.springbasic.autowireusingannotation.Employee" name="emp1" p:name="Ritwik" />  
+	
+	
+ <!-- byConstructor -->
+ 
+<!-- <bean class="com.springcore.springbasic.autowireusingannotaion.Address" name="address">
+	<constructor-arg name="street" value="church street" />
+	<constructor-arg name="city" value="Mumbai" />
+    </bean>
+    
+	<bean class="com.springcore.springbasic.autowireusingannotation.Address" name="address1">
+		<constructor-arg name="street" value="mg road" />
+		<constructor-arg name="city" value="Delhi" />
+	</bean>
+
+	<bean class="com.springcore.springbasic.autowireusingannotation.Employee" name="emp1" c:name="Ritwik" />  --> 
+ 
+ 
+</beans>

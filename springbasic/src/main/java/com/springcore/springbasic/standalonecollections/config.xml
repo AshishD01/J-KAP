@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<util:list list-class="java.util.LinkedList" id="sample">
+
+		<value>Ritwik</value>
+
+		<value>Aman</value>
+
+		<value>Rohan</value>
+
+		<value>Mohan</value>
+
+	</util:list>
+
+	<util:map map-class="java.util.TreeMap" id="cour">
+
+		<entry key="Spring" value="80000" />
+		<entry key="Django" value="50000" />
+		<entry key="Hibernate" value="20000" />
+	</util:map>
+
+	<bean class="com.springcore.springbasic.standalonecollections.Person"
+		name="person1">
+		<property name="course" ref="sample" />
+		<property name="courses" ref="cour" />
+
+	
+	</bean>
+
+	<bean class="com.springcore.springbasic.standalonecollections.Person"
+		name="person2">
+		<property name="course" ref="sample" />
+		<property name="courses" ref="cour" />
+
+
+	</bean>
+
+
+</beans>
