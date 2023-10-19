@@ -8,6 +8,6 @@ class SelfPractice1ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("hello");
 	}
-
 }
